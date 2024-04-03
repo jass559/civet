@@ -36,19 +36,18 @@ if( $validar == null || $validar = ''){
     <link rel="stylesheet" href="../css/fontawesome-all.min.css">
     <link rel="shortcut icon" href="img/civet.ico" />
 
-<link rel="stylesheet" href="../css/estilo.css">
+
 <link rel="stylesheet" href="../css/es.css">
 <link  rel="stylesheet" href="//cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css"></link>
 <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.5.0/css/responsive.dataTables.min.css"></link>
+
 <script src="https://code.jquery.com/jquery-3.7.0.js"  ></script>
 <script src="//cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
-
-
 <script src="https://cdn.datatables.net/responsive/2.5.0/js/dataTables.responsive.min.js"></script>
-
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-    <title>Buscar</title>
+
+<title>Buscar</title>
 </head>
 <style>
     .div-1 {
@@ -132,7 +131,7 @@ if( $validar == null || $validar = ''){
         
         
  
-      <table id="dataciv" class="table table-striped table-dark table_id display responsive nowrap" data-page-length='25' data->
+      <table id="dataciv"   data-page-length='25' data->
 
                    
                         <thead>    
@@ -154,16 +153,13 @@ if( $validar == null || $validar = ''){
 				<?php
 
 
-$host = "sql207.epizy.com";
-$user = "epiz_34255198";
-$password = "vq4Ovb1lKWDtuRw";
-$database = "epiz_34255198_r_user";
-$conexion=mysqli_connect($host, $user, $password, $database);
- 
+include '../includes/_db.php';
+
 $query = "SELECT id,codigo_part,descri_part,zona_part, modulo_part,rack_part, nivel_part, total_part FROM items_copy1";
 
 
 $dato = mysqli_query($conexion, $query);
+
 if($dato -> num_rows >0){
   while($fila=mysqli_fetch_array($dato)){
 
@@ -225,11 +221,7 @@ else{
 
 
 <script type="text/javascript">
-  var table = new DataTable('#dataciv', {
-    language: {
-        url: '//cdn.datatables.net/plug-ins/1.13.7/i18n/es-ES.json',
-    },
-});
+  var table = new DataTable('#dataciv');
  
  
   

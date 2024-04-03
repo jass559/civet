@@ -15,6 +15,31 @@
 </head>
 
 <body>
+    
+<header>
+     
+     <nav class="navbar fixed-top navbar-expand-lg" data-bs-theme="dark" style="background-color: #ec3237;">
+     <div class="container-fluid">
+         <a class="navbar-brand" href="#">
+         <img src="../img/rU-9M2LK_400x400.jpg" alt="Logo" width="150" height="50" class="d-inline-block align-text-top" ">    
+         </a>
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+             <li class="nav-item">
+             <a class="nav-link active" aria-current="page" href="#" style="color: #FFFFFF">Iniciar Sesi&oacuten</a>
+             </li>
+             
+         </ul>
+         
+         
+         </div>
+     </div>
+     </nav>
+
+ </header>
 
 <form  action="_functions.php" method="POST">
 <div id="login" >

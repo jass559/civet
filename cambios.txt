@@ -1,0 +1,8 @@
+class="table table-striped table-dark table_id display responsive nowrap"
+data-page-length='25' data-
+
+<form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                <button class="btn btn-light" type="submit">Buscar</button>
+
+            </form>

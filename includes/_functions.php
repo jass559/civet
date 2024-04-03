@@ -57,12 +57,7 @@ if (isset($_POST['accion'])){
 
 		
     function editar_registro() {
-        $host = "sql207.epizy.com";
-$user = "epiz_34255198";
-$password2 = "vq4Ovb1lKWDtuRw";
-$database = "epiz_34255198_r_user";
-		//$conexion=mysqli_connect("localhost","root","","r_user");
-        $conexion=mysqli_connect($host, $user, $password2, $database);
+        include '_db.php';
 		extract($_POST);
 		$consulta="UPDATE user SET nombre = '$nombre', correo = '$correo', telefono = '$telefono',
 		password ='$password', rol = '$rol' WHERE id = '$id' ";
@@ -75,18 +70,13 @@ $database = "epiz_34255198_r_user";
 }
 
 function editar_rep() {
-
+    include '_db.php';
     
     $CDK="0";
     $CBU="0";
     $SDK="0";
     $REP="0";
-    $host = "sql207.epizy.com";
-    $user = "epiz_34255198";
-    $password2 = "vq4Ovb1lKWDtuRw";
-    $database = "epiz_34255198_r_user";
-    // Crear conexión
-    $conexion=mysqli_connect($host, $user, $password2, $database);
+
     
     extract($_POST);
     switch ($_POST['opcion']){
@@ -156,7 +146,7 @@ function editar_rep() {
         
             echo '<script>mostrar_verde()</script>';
             
-            header('Location: ../views/buscar.php');
+            header('Location: ../views/buscar2024.php');
           
 
     }
@@ -168,16 +158,7 @@ function editar_rep() {
 }
 
 function eliminar_registro() {
-    $host = "sql207.epizy.com";
-$user = "epiz_34255198";
-$password = "vq4Ovb1lKWDtuRw";
-$database = "epiz_34255198_r_user";
-    //$conexion=mysqli_connect("localhost","root","","r_user");
-    $host = "sql207.epizy.com";
-$user = "epiz_34255198";
-$password = "vq4Ovb1lKWDtuRw";
-$database = "epiz_34255198_r_user"; 
-$conexion=mysqli_connect($host, $user, $password, $database);
+    include '_db.php';
     extract($_POST);
     $id= $_POST['id'];
     $consulta= "DELETE FROM user WHERE id= $id";
@@ -190,15 +171,14 @@ $conexion=mysqli_connect($host, $user, $password, $database);
 }
 
 function acceso_user() {
-    $host = "sql207.epizy.com";
-    $user = "epiz_34255198";
-    $password2 = "vq4Ovb1lKWDtuRw";
-    $database = "epiz_34255198_r_user";
+    //llamada a la conexion a la BD
+    include '_db.php';
+   
     $nombre=$_POST['nombre'];
     $password=$_POST['password'];
     session_start();
     $_SESSION['nombre']=$nombre;
-    $conexion=mysqli_connect($host, $user, $password2, $database);
+    //$conexion=mysqli_connect($host, $user, $password2, $database);
     //$conexion=mysqli_connect("localhost","root","","r_user");
     $consulta= "SELECT * FROM user WHERE nombre='$nombre' AND password='$password'";
     $resultado=mysqli_query($conexion, $consulta);
@@ -210,7 +190,7 @@ function acceso_user() {
         header('Location: ../views/user.php');
 
     }else if($filas['rol'] == 2){//lector
-        header('Location: ../views/buscar.php');
+        header('Location: ../views/buscar2024.php');
     }
     
     

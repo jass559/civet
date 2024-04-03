@@ -6,7 +6,7 @@
 * Date:    2019-12-07                                                          *
 * Author:  Olivier PLATHEY                                                     *
 *******************************************************************************/
-
+/****** cambio de p */
 define('FPDF_VERSION','1.82');
 
 class FPDF
@@ -134,7 +134,7 @@ function __construct($orientation='P', $unit='mm', $size='A4')
 	// Page orientation
 	$orientation = strtolower($orientation);
 	if($orientation=='p' || $orientation=='portrait')
-	{
+	{  
 		$this->DefOrientation = 'P';
 		$this->w = $size[0];
 		$this->h = $size[1];

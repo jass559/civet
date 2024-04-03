@@ -19,12 +19,7 @@ if( $validar == null || $validar = ''){
 $id= $_GET['id'];
 
 
-$host = "sql207.epizy.com";
-    $user = "epiz_34255198";
-    $password2 = "vq4Ovb1lKWDtuRw";
-    $database = "epiz_34255198_r_user";
-    $conexion=mysqli_connect($host, $user, $password2, $database);
-
+include '../includes/_db.php';
     
 
 
@@ -78,13 +73,50 @@ $host = "sql207.epizy.com";
 </div>
   <div class="container div-1">
     <header class="d-flex flex-wrap justify-content-center  py-3 mb-4 border-bottom">
-      <a href="" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-        
-        <img class="bi me-2"  width="50" height="40" src="img/civet.png"  />
-        <span class="fs-4">Actualización de Prod&uacute;cto</span>
-        <span class="fs-4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-        <span class="fs-4">Usuario : <?php echo $_SESSION['nombre']; ?></span>
-      </a>
+    <nav class="navbar fixed-top navbar-expand-lg " data-bs-theme="dark" style="background-color: #ec3237;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+            <img src="img/rU-9M2LK_400x400.jpg" alt="Logo" width="150" height="50" class="d-inline-block align-text-top" ">    
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#">Nuevo Item</a>
+                </li>
+                <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Reportes
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Exportar a Excel</a></li>
+                    <li><a class="dropdown-item" href="../includes/reporte.php" target="_blank">Reporte PDF</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">...</a></li>
+                </ul>
+                </li>
+                <li class="nav-item" >
+                
+                    
+                
+                </li>
+                <li class="nav-item">
+            
+                
+                </li>
+            </ul>
+            
+            <a class="nav-link p-2" href="#" style="color: #27A90D"><b>Usuario :</b> <?php echo $_SESSION['nombre']; ?></a>
+            <a class="nav-link btn btn-warning" href="../includes/_sesion/cerrarSesion.php" style="color: #FFFFFF">Cerrar Sesi&oacute;n</a>
+            
+            </div>
+        </div>
+        </nav>
 
       
     </header>
@@ -100,7 +132,7 @@ $host = "sql207.epizy.com";
             <!--Dos Input tipo Texto en 2 columnas de 6-->
             <div class="row ">
                 
-                    <div class="form-floating col-md-3  col-sm-12 col-xs-12">
+                    <div class="form-floating col-md-3  col-sm-12 col-xs-12 m-2">
                        
                         <input type="text"  id="cod_parte" name="cod_parte"  class="form-control" value="<?php echo $rep['codigo_part'];?>" required>
                         <label class="form-label" for="cod_parte">Cod. de Parte:</label>
@@ -396,7 +428,7 @@ $host = "sql207.epizy.com";
             <div class="text-center">
                 <button type="submit" class="btn btn-success btn-lg" >Guardar</button>
                 <!--<button onclick="mostrar_verde()" class="btn " >verde</button> -->
-                <a href="buscar.php" class="btn btn-danger btn-lg">Cancelar</a>
+                <a href="buscar2024.php" class="btn btn-danger btn-lg">Cancelar</a>
             </div>
 
           </form>

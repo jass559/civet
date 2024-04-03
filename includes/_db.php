@@ -1,8 +1,13 @@
 <?php
-
-$host = "sql207.epizy.com";
+//web host
+/*$host = "sql207.epizy.com";
 $user = "epiz_34255198";
 $password = "vq4Ovb1lKWDtuRw";
+$database = "epiz_34255198_r_user";*/
+// local
+$host = "localhost";
+$user = "root";
+$password = "";
 $database = "epiz_34255198_r_user";
 
 
