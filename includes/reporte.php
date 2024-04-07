@@ -27,7 +27,7 @@ function Header()
     $this->Cell(70,10,'Descripcion',1,0,'C',0);
     $this->Cell(20,10,'Cantidad',1,0,'C',0);
     $this->Cell(15,10,'Costo',1,0,'C',0);
-    $this->Cell(15,10,'Otro',1,1,'C',0);
+    $this->Cell(15,10,'Total',1,1,'C',0);
     
    
 	
@@ -67,13 +67,13 @@ $pdf->SetFont('Arial','',8);
 while ($row=$resultado->fetch_assoc()) {
 
     $pdf->SetX(10);
-
+    $total=$row['costo_part'] * $row['total_part'];
     $pdf->Cell(10,10,$row['id'],1,0,'C',0);
     $pdf->Cell(40,10,$row['codigo_part'],1,0,'C',0);
 	$pdf->Cell(70,10,$row['descri_part'],1,0,'C',0);
     $pdf->Cell(20,10,$row['total_part'],1,0,'C',0);
-    $pdf->Cell(15,10,'0,00',1,0,'C',0);
-    $pdf->Cell(15,10,'...',1,1,'C',0);
+    $pdf->Cell(15,10,$row['costo_part'],1,0,'C',0);
+    $pdf->Cell(15,10,$total,1,1,'C',0);
     
      
 	

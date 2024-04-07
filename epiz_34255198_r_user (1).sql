@@ -4722,7 +4722,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `nombre`, `correo`, `telefono`, `password`, `fecha`, `rol`) VALUES
-(3, 'Denys2023', 'user@gmail.com', '9900258789', '12345', '2022-06-11 18:30:47', 2),
+(3, 'Denys2024', 'user@gmail.com', '9900258789', '12345', '2022-06-11 18:30:47', 2),
 (4, 'Denys123', 'usuario@gmail.com.mx', '9911165670', '12345', '2023-12-10 11:09:42', 1),
 (7, 'Jass559', 'jt615257@gmail.com', '4634847', '12345', '2023-12-11 08:42:54', 2),
 (10, 'Shaggy88', 'Shaggy@Buu.net', '54948151', '12345', '2022-06-13 19:09:56', 1),

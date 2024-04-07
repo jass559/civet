@@ -76,7 +76,7 @@ if( $validar == null || $validar = ''){
                     Reportes
                 </a>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Exportar a Excel</a></li>
+                    <li><a class="dropdown-item" href="../includes/excel_repuestos.php">Exportar a Excel</a></li>
                     <li><a class="dropdown-item" href="../includes/reporte.php" target="_blank">Reporte PDF</a></li>
                     <li><hr class="dropdown-divider"></li>
                     <li><a class="dropdown-item" href="#">...</a></li>
@@ -108,7 +108,7 @@ if( $validar == null || $validar = ''){
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
    
     <!-- 
-     <a class="btn btn-primary" href="../includes/excel.php">Excel
+     <a class="btn btn-primary" href="../includes/excel_repuestos.php">Excel
      
      </a>
      <a href="../includes/reporte.php" class="btn btn-primary"><b>PDF</b> </a>
@@ -132,10 +132,7 @@ if( $validar == null || $validar = ''){
                       <th>Id</th>
                       <th>N&uacute;mero de Parte</th>
                       <th>Descripci&oacute;n</th>
-                      <th>Zona</th>
-                      <th>M&oacute;dulo</th>
-                      <th>Rack</th>
-                      <th>N&iacute;vel</th>
+                      
                       <th>Cantidad</th>
                       <th>Acciones</th>
                    
@@ -165,10 +162,7 @@ if( $validar == null || $validar = ''){
     <td> <?php echo $fila['id']?> </td>  
     <td> <?php echo $fila['codigo_part']?> </td>
     <td> <?php echo $fila['descri_part']?> </td>
-    <td> <?php echo $fila['zona_part']?> </td>
-    <td> <?php echo $fila['modulo_part']?> </td>
-    <td> <?php echo $fila['rack_part']?> </td>
-    <td> <?php echo $fila['nivel_part']?> </td>
+   
     <td> <?php echo $fila['total_part']?> </td>
     <td>
         <a class='btn btn-primary' href="editar_rep.php?id=<?php echo $fila['id']?> ">

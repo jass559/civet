@@ -1,6 +1,6 @@
 <?php
 
-require_once ("_db.php");
+
 header("Content-Type: application/xls");
 header("Content-Disposition: attachment; filename=reporte.xls");
 ?>
@@ -25,7 +25,7 @@ header("Content-Disposition: attachment; filename=reporte.xls");
 
 <?php
 
-$conexion=mysqli_connect("localhost","root","","r_user");               
+include '../includes/_db.php';         
 $SQL="SELECT user.id, user.nombre, user.correo, user.password, user.telefono,
 user.fecha, permisos.rol FROM user
 LEFT JOIN permisos ON user.rol = permisos.id";
